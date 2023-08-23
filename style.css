@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400;10..48,500;10..48,600&family=Inter:wght@300;400;500;600&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    cursor: default;
+    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px; 
+    font-size: 18px;
+    /* here ised align-items center didnt work why? 
+     */
+    background-color: #eef5ff;
+}
+
+.container {
+    width: 800px;
+    height: 600px;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 20px;
+    
+    
+    
+   
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; 
+    left:40px;
+    /* border: 1px solid black; */
+    height: 80px;
+    
+}
+
+.heading p{
+    margin-top: 13px;
+    color: #b0b0b8;
+    
+}
+@keyframes slidein {
+    from {
+      margin-left: 50%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+.heading h1 {
+    color: #071a3a;
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+}
+
+form{
+    position: absolute;
+    top: 150px;
+    left: 40px;
+    margin-top:30px;
+    /* border: 1px solid black; */
+    height: 400px;
+    width: 441px;
+}
+
+.inputs {
+    /* border: 1px solid black; */
+    height: 100px;
+
+}
+
+.inputs label {
+    font-size: 16px;
+    color: #263450;
+}
+
+.inputs input {
+    width: 438px;
+    height: 40px;
+    margin-top: 15px;
+    border-radius: 5px;
+    transition: 1s ease;
+}
+
+input::placeholder {
+    color:#b0b0b8;
+    padding-left: 10px;
+
+}
+
+input{
+    border: 0.5px solid #c9cdd3;
+}
+
+
+button {
+    position: absolute;
+    right: 0px;
+    bottom: 25px;
+    height:45px;
+    width: 110px;
+    border-radius: 10px;
+    background-color: #032859;
+    color: #cae0f7;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 1s ease;
+    
+}
+
+button:hover {
+    background-color: hotpink;
+    color: #071a3a;
+}
+
+.container2 {
+    position: absolute;
+    width:500px;
+    /* border: 1px solid black; */
+    height: 600px;
+    right: 0;
+}
+
+.container3 {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    width: 270px;
+    height: 570px;
+    border-radius:18px ;
+    background-color:#483eff;
+}
+
+img {
+    width: 270px;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.ananas {
+    /* border: 1px solid black; */
+    /* position: absolute; */
+    width: 250px;
+    height: 60px;
+    padding-left: 20px;
+    /* padding-top: 18px; */
+    display: flex;
+    margin-bottom: 15px;
+    position:relative;
+
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid #f4f5ff; */
+    width: 30px;
+    height: 30px;
+    border-radius: 200px;
+    margin-top:13px;
+    background-color: #c0e0ff;
+    font-weight: bold;
+    font-size: 14px;
+}
+.hulo {
+    background-color: #483eff;
+    color: #f4f5ff;
+    border: 1px solid #f4f5ff; 
+    transition: 1s ease;
+}
+
+.hulo:hover {
+    background-color: hotpink;
+    color: #263450;
+}
+
+.steps {
+    display: flex;
+    padding-left: 20px;
+    padding-top: 13px;
+    color:#b0b0b8;
+    width: 100px;
+    height: 30px;
+    
+}
+
+.info{
+    display: flex;
+    width: 120px;
+    height: 30px;
+    font-size: 16px;
+    bottom: 0px;
+    left: 69px;
+    align-items: center;
+    color: #f4f5ff;
+    position: absolute;
+    transition: 1s ease;
+}
+
+.info:hover {
+    text-decoration:underline;
+    text-underline-offset: 10px;
+    color: #263450;
+}
+
+.inputs input:focus {
+    background-color: #483eff;
+    color: #c0e0ff;
+}
+
+@media screen and (max-width: 750px) {
+    .container2 {
+        width: 100%;
+        /* position: absolute; */
+        
+    }
+    .container3{
+        width: 96%;
+        height: 50%;
+        bottom: 0;
+        position: relative;
+    }
+    .container {
+        height: 1200px;
+        margin-top:0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 500px;
+        height: 100%;
+        background-color:#eef5ff ;
+    }
+    .container3{
+        background-image: none;
+        background-color:#eef5ff ;
+        margin-left: 15px;
+}
+    img {display: none;}
+    .inputs input {
+        width: 170px;
+    }
+    .container2 {
+        left: 15px;
+    }
+    button{
+        left: 15px;
+    }
+}
+    
+
+
+
